@@ -1,0 +1,17 @@
+{
+  "platforms": [
+    "apple",
+    "android",
+    "web"
+  ],
+  "apple": {
+    "modules": [
+      "CredentialManagerModule"
+    ]
+  },
+  "android": {
+    "modules": [
+      "expo.modules.credentialmanager.CredentialManagerModule"
+    ]
+  }
+}

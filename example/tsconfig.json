@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "credential-manager": ["../src/index"],
+      "credential-manager/*": ["../src/*"]
+    }
+  }
+}
