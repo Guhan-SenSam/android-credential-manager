@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "credential-manager-example",
-    "slug": "credential-manager-example",
+    "name": "android-credential-manager-example",
+    "slug": "android-credential-manager-example",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon.jpg",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
@@ -14,17 +14,26 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "expo.modules.credentialmanager.example"
+      "bundleIdentifier": "androidcredentialmanager.example"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "expo.modules.credentialmanager.example"
+      "package": "androidcredentialmanager.example"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "android-credential-manager",
+        {
+          "domainUrl": "https://guhansensam.com"
+        }
+      ]
+    ]
   }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "credential-manager",
+  "name": "android-credential-manager",
   "version": "0.1.0",
-  "description": "My new module",
+  "description": "An expo module to access the new Android credential Manager. Supports username/password, Passkeys and Google Sign In. This module is built to use the suggested and latest way to sign in users through Google",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
@@ -19,20 +19,27 @@
     "react-native",
     "expo",
     "credential-manager",
-    "CredentialManager"
+    "CredentialManager",
+    "google-sign-in",
+    "google",
+    "android"
   ],
-  "repository": "https://github.com/Guhan-SenSam/credential-manager",
+  "repository": "https://github.com/Guhan-SenSam/android-credential-manager",
   "bugs": {
-    "url": "https://github.com/Guhan-SenSam/credential-manager/issues"
+    "url": "https://github.com/Guhan-SenSam/android-credential-manager/issues"
   },
   "author": "Guhan Sensam <guhansensam@gmail.com> (https://github.com/Guhan-SenSam)",
   "license": "MIT",
-  "homepage": "https://github.com/Guhan-SenSam/credential-manager#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/Guhan-SenSam/android-credential-manager#readme",
+  "dependencies": {
+    "expo-status-bar": "^2.0.1",
+    "react-native-svg": "^15.11.2"
+  },
   "devDependencies": {
     "@types/react": "~18.3.12",
-    "expo-module-scripts": "^4.0.3",
     "expo": "~52.0.0",
+    "expo-module-scripts": "^4.0.3",
+    "prettier": "^3.5.2",
     "react-native": "0.76.0"
   },
   "peerDependencies": {

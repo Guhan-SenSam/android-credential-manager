@@ -14,30 +14,38 @@ useExpoPublishing()
 // Most of the time, you may like to manage the Android SDK versions yourself.
 def useManagedAndroidSdkVersions = false
 if (useManagedAndroidSdkVersions) {
-  useDefaultAndroidSdkVersions()
+    useDefaultAndroidSdkVersions()
 } else {
-  buildscript {
-    // Simple helper that allows the root project to override versions declared by this library.
-    ext.safeExtGet = { prop, fallback ->
-      rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+    buildscript {
+        // Simple helper that allows the root project to override versions declared by this library.
+        ext.safeExtGet = { prop, fallback ->
+            rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+        }
     }
-  }
-  project.android {
-    compileSdkVersion safeExtGet("compileSdkVersion", 34)
-    defaultConfig {
-      minSdkVersion safeExtGet("minSdkVersion", 21)
-      targetSdkVersion safeExtGet("targetSdkVersion", 34)
+    project.android {
+        compileSdkVersion safeExtGet("compileSdkVersion", 34)
+        defaultConfig {
+            minSdkVersion safeExtGet("minSdkVersion", 21)
+            targetSdkVersion safeExtGet("targetSdkVersion", 34)
+        }
     }
-  }
 }
 
 android {
-  namespace "expo.modules.credentialmanager"
-  defaultConfig {
-    versionCode 1
-    versionName "0.1.0"
-  }
-  lintOptions {
-    abortOnError false
-  }
+    namespace "expo.modules.credentialmanager"
+    defaultConfig {
+        versionCode 1
+        versionName "0.1.0"
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation("androidx.credentials:credentials:1.5.0-rc01")
+    implementation("androidx.credentials:credentials-play-services-auth:1.5.0-rc01")
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation "com.google.android.libraries.identity.googleid:googleid:1.1.1"
+
 }

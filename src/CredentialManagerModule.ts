@@ -1,12 +1,13 @@
-import { NativeModule, requireNativeModule } from 'expo';
+import { NativeModule, requireNativeModule } from "expo";
+import {CreateResponse} from "./CreateResponse.types";
 
-import { CredentialManagerModuleEvents } from './CredentialManager.types';
-
-declare class CredentialManagerModule extends NativeModule<CredentialManagerModuleEvents> {
-  PI: number;
-  hello(): string;
-  setValueAsync(value: string): Promise<void>;
+declare class CredentialManagerModule extends NativeModule {
+  saveUsernameAndPassword(username: string, password: string):string
+  createPassKey(response: string): string
+  _login(logintypes: string): string;
+  prefetchCredentials(loginProviders: string): void;
 }
 
-// This call loads the native module object from the JSI.
-export default requireNativeModule<CredentialManagerModule>('CredentialManager');
+export default requireNativeModule<CredentialManagerModule>(
+  "CredentialManager",
+);
