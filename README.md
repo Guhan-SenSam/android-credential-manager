@@ -1,32 +1,24 @@
-# android-credential-manager
+---
+description: >-
+  Android-Credential-Manager is an expo module for implementing the Credential
+  Manager into your React native application.
+---
 
-My new module
+# 👋 Welcome to Android-Credential-Manager Docs
 
-# API documentation
+<figure><img src="https://developer.android.com/static/training/sign-in/images/credman-bottomsheet-animated.gif" alt="" width="188"><figcaption></figcaption></figure>
 
-- [Documentation for the latest stable release](https://docs.expo.dev/versions/latest/sdk/android-credential-manager/)
-- [Documentation for the main branch](https://docs.expo.dev/versions/unversioned/sdk/android-credential-manager/)
+## Overview
 
-# Installation in managed Expo projects
+The Credential Manager is a native Android component that allows developers the ability for their users to easily authenticate themselves using...
 
-For [managed](https://docs.expo.dev/archive/managed-vs-bare/) Expo projects, please follow the installation instructions in the [API documentation for the latest stable release](#api-documentation). If you follow the link and there is no documentation available then this library is not yet usable within managed projects &mdash; it is likely to be included in an upcoming Expo SDK release.
+1. Email and Password
+2. Passkeys
+3. Google Account Login
+4. Custom Third Party&#x20;
 
-# Installation in bare React Native projects
+It appears as a bottom card during your user's authentication flow by either the user clicking on a button (Manual Triggering) or you calling the package for the user when they enter a page (Implicit Calling).
 
-For bare React Native projects, you must ensure that you have [installed and configured the `expo` package](https://docs.expo.dev/bare/installing-expo-modules/) before continuing.
-
-### Add the package to your npm dependencies
-
-```
-npm install android-credential-manager
-```
-
-### Configure for Android
-
-
-
-
-
-# Contributing
-
-Contributions are very welcome! Please refer to guidelines described in the [contributing guide]( https://github.com/expo/expo#contributing).
+{% hint style="warning" %}
+This package only provides support for the above features on Android. If you want a cross-platform implementation stay tuned for the release of our Expo-OneAuth Package with support for more authentication methods across all platforms.
+{% endhint %}
