@@ -10,23 +10,13 @@ This package is designed to work inside Expo projects as it leverages the use of
 
 {% tabs %}
 {% tab title="Expo" %}
-Installation in expo CNG is as easy as just directly installing the package through your package manager and regenerating your Android native directory.
-
-### NPM
+Installation in expo CNG is as easy as just directly installing the package through expo  and regenerating your Android native directory. The following command installs this package.
 
 ```bash
-npm install android-credential-manager
-npm run android
+npx expo install android-credential-manager
 ```
 
-### Yarn
-
-```bash
-yarn add android-credential-manager
-yarn android
-```
-
-Once the package has been installed, check out the following section on what digital asset linking is and how to configure it in your application.
+Once the installation has been completed, check out the following section on what digital asset linking is and how to configure it in your application.
 {% endtab %}
 
 {% tab title="Manual" %}
@@ -63,15 +53,15 @@ Add the following to your `AndroidManifest.xml` file.
 
 Refer to&#x20;
 
-{% content-ref url="installation.md" %}
-[installation.md](installation.md)
+{% content-ref url="digitial-asset-linking.md" %}
+[digitial-asset-linking.md](digitial-asset-linking.md)
 {% endcontent-ref %}
 
 on what is Digital Asset Linking and how to create one.
 
 ### 5. Link DigitalAsset URL To Your App
 
-Add the following code inside your `strings.xm`l file. Make sure you update the domain to reflect the domain that you have used to hos the Digital Asset  JSON as detailed in the previous step
+Add the following code inside your `strings.xml` file. Make sure you update the domain to reflect the domain that you have used to hos the Digital Asset  JSON as detailed in the previous step
 
 {% code title="strings.xml" %}
 ```xml
@@ -88,7 +78,7 @@ Add the following code inside your `strings.xm`l file. Make sure you update the 
 {% endtab %}
 {% endtabs %}
 
-Add the Plugin to your `app.json.` Make sure you pass in your domain URL as instructed in the DigitalAsset Linking Section.
+Add the Plugin to your `app.json.` Make sure you pass in your domain URL as instructed in the [DigitalAsset Linking Section.](digitial-asset-linking.md)
 
 ```json
 {
@@ -104,4 +94,34 @@ Add the Plugin to your `app.json.` Make sure you pass in your domain URL as inst
   }
 }
 ```
+
+Now you can run your app&#x20;
+
+{% tabs %}
+{% tab title="Local" %}
+To run your app locally use the following commands:
+
+```bash
+npm run android
+```
+
+This will regenerate your native android folder and build your application
+{% endtab %}
+
+{% tab title="EAS" %}
+If you use EAS build for your development run the following command
+
+```bash
+eas build
+```
+
+Then install the built APK onto your emulator or mobile device and start the expo Dev-client with the following command
+
+```
+npx expo start --dev-client
+```
+
+
+{% endtab %}
+{% endtabs %}
 
