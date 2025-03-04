@@ -30,7 +30,7 @@
   },
   "author": "Guhan Sensam <guhansensam@gmail.com> (https://github.com/Guhan-SenSam)",
   "license": "MIT",
-  "homepage": "https://github.com/Guhan-SenSam/android-credential-manager#readme",
+  "homepage": "credentialmanager.guhansensam.com",
   "dependencies": {
     "expo-status-bar": "^2.0.1",
     "react-native-svg": "^15.11.2"
