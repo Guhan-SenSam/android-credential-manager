@@ -1,6 +1,6 @@
 {
   "name": "android-credential-manager",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "An expo module to access the new Android credential Manager. Supports username/password, Passkeys and Google Sign In. This module is built to use the suggested and latest way to sign in users through Google",
   "main": "build/index.js",
   "types": "build/index.d.ts",
