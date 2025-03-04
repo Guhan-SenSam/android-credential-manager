@@ -9,18 +9,12 @@
 <h4 align="center">Android-Credential-Manager is an expo module for implementing the Credential Manager into your React native application.</h4>
 
 <p align="center">
-  <a href="https://badge.fury.io/js/electron-markdownify">
-    <img src="https://badge.fury.io/js/electron-markdownify.svg"
-         alt="Gitter">
-  </a>
+  <a href="https://badge.fury.io/js/android-credential-manager"><img src="https://badge.fury.io/js/android-credential-manager.svg" alt="npm version" height="18"></a>
 </p>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#license">License</a>
+  <a href="#how-to-use">How To Use</a>
 </p>
 
 <h1 align="center">
