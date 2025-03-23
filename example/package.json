@@ -9,7 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "android-credential-manager": "^1.0.1",
+    "android-credential-manager": "^1.0.6",
     "expo": "~52.0.25",
     "expo-status-bar": "~2.0.1",
     "nativewind": "^4.1.23",
@@ -25,10 +25,5 @@
     "@types/react": "~18.3.12",
     "typescript": "^5.3.3"
   },
-  "private": true,
-  "expo": {
-    "autolinking": {
-      "nativeModulesDir": ".."
-    }
-  }
+  "private": true
 }

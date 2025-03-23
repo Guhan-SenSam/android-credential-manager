@@ -1662,12 +1662,13 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-android-credential-manager@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/android-credential-manager/-/android-credential-manager-1.0.1.tgz#2e586cb2fb86cff92891fbc4867cf2e58ea59b3e"
-  integrity sha512-pVFglWP1VbRQiJ2qkU7eoUnmnQe119Vqo+UeY6xDPnbAAGqSCbZE0BDrCp7j9rDcFDeDVaz5V1imW9EmU4vVdA==
+android-credential-manager@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/android-credential-manager/-/android-credential-manager-1.0.5.tgz#bebb22f2e2e85cffc4b4b6227610edd0788fcf6f"
+  integrity sha512-1q0M79wxSYCmVcXZwnqFpYOLZlIyCWvgEjiT6QYaI+LqU0DeNLGff7Qp22K348yNmVghyyxdGktrnBerALlmoA==
   dependencies:
     expo-status-bar "^2.0.1"
+    husky "^9.1.7"
     react-native-svg "^15.11.2"
 
 anser@^1.4.9:
@@ -3285,6 +3286,11 @@ human-signals@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
+
+husky@^9.1.7:
+  version "9.1.7"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-9.1.7.tgz#d46a38035d101b46a70456a850ff4201344c0b2d"
+  integrity sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==
 
 ieee754@^1.1.13:
   version "1.2.1"

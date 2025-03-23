@@ -10,17 +10,17 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { SignInWithGoogleButton } from "android-credential-manager/components/SignInWithGoogleButton";
-import { CredentialManager } from "android-credential-manager/CredentialManager";
 import {
   GoogleButtonProvider,
   GoogleProvider,
   PassKeyCreator,
   PasskeyProvider,
   UsernamePasswordProvider,
-} from "android-credential-manager/loginProviders/LoginProviders";
-import { LoginProvider } from "android-credential-manager/loginProviders/types";
-import { StatusBar } from "expo-status-bar";
+} from "android-credential-manager/build/loginProviders";
+import { LoginProvider } from "android-credential-manager/src/loginProviders/types";
+import { StatusBar, StatusBarAnimation } from "expo-status-bar";
+import { CredentialManager } from "android-credential-manager/src/CredentialManager";
+import { SignInWithGoogleButton } from "../src/components/SignInWithGoogleButton";
 
 interface ButtonProps {
   title: string;

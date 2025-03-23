@@ -59,3 +59,8 @@ yarn-error.log
 # Example generated Code
 example/android
 example/ios
+
+!plugin/
+!plugin/build/
+!plugin/build/**
+!/build
