@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "android-credential-manager": "^1.0.1",
     "expo": "~52.0.25",
     "expo-status-bar": "~2.0.1",
     "nativewind": "^4.1.23",

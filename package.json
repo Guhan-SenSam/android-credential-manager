@@ -9,7 +9,7 @@
     "clean": "expo-module clean",
     "lint": "expo-module lint",
     "test": "expo-module test",
-    "prepare": "expo-module prepare",
+    "prepare": "husky",
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module",
     "open:ios": "xed example/ios",
@@ -33,13 +33,17 @@
   "homepage": "credentialmanager.guhansensam.com",
   "dependencies": {
     "expo-status-bar": "^2.0.1",
+    "husky": "^9.1.7",
     "react-native-svg": "^15.11.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@types/react": "~18.3.12",
+    "commitlint": "^19.8.0",
     "expo": "~52.0.0",
     "expo-module-scripts": "^4.0.3",
-    "prettier": "^3.5.2",
+    "prettier": "^3.5.3",
     "react-native": "0.76.0"
   },
   "peerDependencies": {

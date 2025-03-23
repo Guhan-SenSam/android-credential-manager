@@ -1,12 +1,12 @@
 import {
-    GoogleButtonProviderProps,
-    GoogleProviderProps,
-    LoginProvider,
-    LoginProviderType, PassKeyCreatorProps,
-    PassKeyProviderProps,
-    UsernamePasswordProviderProps
+  GoogleButtonProviderProps,
+  GoogleProviderProps,
+  LoginProvider,
+  LoginProviderType,
+  PassKeyCreatorProps,
+  PassKeyProviderProps,
+  UsernamePasswordProviderProps,
 } from "./types";
-
 
 export class UsernamePasswordProvider implements LoginProvider {
   readonly name = LoginProviderType.USERNAME_PASSWORD;
@@ -71,80 +71,76 @@ export class GoogleProvider implements LoginProvider {
   }
 }
 
+export class GoogleButtonProvider implements LoginProvider {
+  readonly name = LoginProviderType.GOOGLE_BUTTON;
+  public serverClientId: string;
+  public nonce?: string;
+  public domainFilter?: string;
 
-export class  GoogleButtonProvider implements LoginProvider{
-    readonly name = LoginProviderType.GOOGLE_BUTTON;
-    public serverClientId: string;
-    public nonce?: string;
-    public domainFilter?: string;
-
-    constructor({
-        serverClientId,
-        nonce,
-        domainFilter,
-    }: GoogleButtonProviderProps) {
-        if (!serverClientId) {
-            throw new Error("serverClientId is required");
-        }
-        this.serverClientId = serverClientId;
-        this.nonce = nonce;
-        this.domainFilter = domainFilter;
+  constructor({
+    serverClientId,
+    nonce,
+    domainFilter,
+  }: GoogleButtonProviderProps) {
+    if (!serverClientId) {
+      throw new Error("serverClientId is required");
     }
+    this.serverClientId = serverClientId;
+    this.nonce = nonce;
+    this.domainFilter = domainFilter;
+  }
 
-    serialize(): object {
-        return {
-            name: this.name,
-            options: {
-                serverClientId: this.serverClientId,
-                nonce: this.nonce,
-                domainFilter: this.domainFilter,
-            },
-        };
-    }
-
-
+  serialize(): object {
+    return {
+      name: this.name,
+      options: {
+        serverClientId: this.serverClientId,
+        nonce: this.nonce,
+        domainFilter: this.domainFilter,
+      },
+    };
+  }
 }
 
 export class PasskeyProvider implements LoginProvider {
-    readonly name = LoginProviderType.PASSKEY;
-    public challenge: string;
-    public allowCredentials?: {
-        type: "public-key"; // Always
-        id: string; // Base64URL-encoded credential ID
-        transports?: string[]; // List of transports (e.g., "usb", "ble", "nfc")
-    }[]
-    public timeout: number;
-    public userVerification: string;
-    public rpId: string;
+  readonly name = LoginProviderType.PASSKEY;
+  public challenge: string;
+  public allowCredentials?: {
+    type: "public-key"; // Always
+    id: string; // Base64URL-encoded credential ID
+    transports?: string[]; // List of transports (e.g., "usb", "ble", "nfc")
+  }[];
+  public timeout: number;
+  public userVerification: string;
+  public rpId: string;
 
-    constructor({
-        challenge,
-        allowCredentials,
-        timeout,
-        userVerification,
-        rpId,
-    }: PassKeyProviderProps) {
-        this.challenge = challenge;
-        this.allowCredentials = allowCredentials;
-        this.timeout = timeout;
-        this.userVerification = userVerification;
-        this.rpId = rpId;
-    }
+  constructor({
+    challenge,
+    allowCredentials,
+    timeout,
+    userVerification,
+    rpId,
+  }: PassKeyProviderProps) {
+    this.challenge = challenge;
+    this.allowCredentials = allowCredentials;
+    this.timeout = timeout;
+    this.userVerification = userVerification;
+    this.rpId = rpId;
+  }
 
-    serialize(): object {
-        return {
-        name: this.name,
-        options: {
-            challenge: this.challenge,
-            allowCredentials: this.allowCredentials,
-            timeout: this.timeout,
-            userVerification: this.userVerification,
-            rpId: this.rpId,
-        },
-        };
-    }
+  serialize(): object {
+    return {
+      name: this.name,
+      options: {
+        challenge: this.challenge,
+        allowCredentials: this.allowCredentials,
+        timeout: this.timeout,
+        userVerification: this.userVerification,
+        rpId: this.rpId,
+      },
+    };
+  }
 }
-
 
 export class PassKeyCreator implements PassKeyCreatorProps {
   challenge: string;

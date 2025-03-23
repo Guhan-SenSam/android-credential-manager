@@ -32,7 +32,6 @@ export interface GoogleButtonProviderProps extends BaseLoginProviderProps {
   domainFilter?: string;
 }
 
-
 export interface PassKeyProviderProps {
   challenge: string;
   allowCredentials?: {
@@ -58,4 +57,3 @@ export interface PassKeyCreatorProps {
   };
   timeout?: number;
 }
-

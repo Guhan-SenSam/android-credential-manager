@@ -1,9 +1,13 @@
 on:
   push:
     branches: master
+    paths-ignore:
+      - '**/*'
+  workflow_dispatch:
 
 jobs:
   publish:
+    if: ${{ !startsWith(github.event.head_commit.message, 'docs:') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
