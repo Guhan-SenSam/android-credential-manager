@@ -1,9 +1,9 @@
 import { NativeModule, requireNativeModule } from "expo";
-import {CreateResponse} from "./CreateResponse.types";
+import { CreateResponse } from "./CreateResponse.types";
 
 declare class CredentialManagerModule extends NativeModule {
-  saveUsernameAndPassword(username: string, password: string):string
-  createPassKey(response: string): string
+  saveUsernameAndPassword(username: string, password: string): string;
+  createPassKey(response: string): string;
   _login(logintypes: string): string;
   prefetchCredentials(loginProviders: string): void;
 }

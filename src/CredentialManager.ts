@@ -22,10 +22,10 @@ import {
 export class CredentialManager {
   static saveUsernameAndPassword(
     username: string,
-    password: string
+    password: string,
   ): UsernamePasswordCreateResponse | null {
     const result = JSON.parse(
-      CredentialManagerModule.saveUsernameAndPassword(username, password)
+      CredentialManagerModule.saveUsernameAndPassword(username, password),
     ) as CreateResponse;
     if (result.name === "Error") {
       createCredErrorHandler(result);
@@ -39,7 +39,7 @@ export class CredentialManager {
 
   static createPassKey(request: PassKeyCreator): PassKeyCreator | null {
     const result = JSON.parse(
-      CredentialManagerModule.createPassKey(request.generateResponse())
+      CredentialManagerModule.createPassKey(request.generateResponse()),
     ) as CreateResponse;
     if (result.name === "Error") {
       createCredErrorHandler(result);
@@ -53,10 +53,10 @@ export class CredentialManager {
 
   static login(loginProviders: LoginProvider[]) {
     const serializedLoginTypes = loginProviders.map((loginType) =>
-      loginType.serialize()
+      loginType.serialize(),
     );
     const result = JSON.parse(
-      CredentialManagerModule._login(JSON.stringify(serializedLoginTypes))
+      CredentialManagerModule._login(JSON.stringify(serializedLoginTypes)),
     ) as LoginResponse;
     switch (result.name) {
       case "Error":
@@ -73,11 +73,11 @@ export class CredentialManager {
   }
 
   static loginWithGoogle(
-    provider: GoogleButtonProvider
+    provider: GoogleButtonProvider,
   ): GoogleLoginResponse | null {
     const providers = [provider].map((loginType) => loginType.serialize());
     const result = JSON.parse(
-      CredentialManagerModule._login(JSON.stringify(providers))
+      CredentialManagerModule._login(JSON.stringify(providers)),
     ) as LoginResponse;
     switch (result.name) {
       case "Error":
@@ -91,10 +91,10 @@ export class CredentialManager {
 
   static prefetchCredentials(loginProviders: LoginProvider[]): void {
     const serializedLoginProviders = loginProviders.map((loginProvider) =>
-      loginProvider.serialize()
+      loginProvider.serialize(),
     );
     CredentialManagerModule.prefetchCredentials(
-      JSON.stringify(serializedLoginProviders)
+      JSON.stringify(serializedLoginProviders),
     );
   }
 }

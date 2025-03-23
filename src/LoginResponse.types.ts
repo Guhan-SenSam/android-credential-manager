@@ -1,16 +1,19 @@
-import {LoginProviderType} from "./loginProviders/types";
+import { LoginProviderType } from "./loginProviders/types";
 
-export type LoginResponse = LoginErrorResponse | UsernamePasswordLoginResponse | GoogleLoginResponse | PassKeyLoginResponse;
+export type LoginResponse =
+  | LoginErrorResponse
+  | UsernamePasswordLoginResponse
+  | GoogleLoginResponse
+  | PassKeyLoginResponse;
 
 export interface LoginErrorResponse {
-  name: "Error",
+  name: "Error";
   type: string;
   message: string;
 }
 
-
 export interface UsernamePasswordLoginResponse {
-  name : LoginProviderType.USERNAME_PASSWORD;
+  name: LoginProviderType.USERNAME_PASSWORD;
   username: string;
   password: string;
 }
