@@ -10,16 +10,16 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { SignInWithGoogleButton } from "credential-manager/components/SignInWithGoogleButton";
-import { CredentialManager } from "credential-manager/CredentialManager";
+import { SignInWithGoogleButton } from "android-credential-manager/components/SignInWithGoogleButton";
+import { CredentialManager } from "android-credential-manager/CredentialManager";
 import {
   GoogleButtonProvider,
   GoogleProvider,
   PassKeyCreator,
   PasskeyProvider,
   UsernamePasswordProvider,
-} from "credential-manager/loginProviders/LoginProviders";
-import { LoginProvider } from "credential-manager/loginProviders/types";
+} from "android-credential-manager/loginProviders/LoginProviders";
+import { LoginProvider } from "android-credential-manager/loginProviders/types";
 import { StatusBar } from "expo-status-bar";
 
 interface ButtonProps {
@@ -88,7 +88,7 @@ export default function App() {
           name: "guhansensam", // Username of the User
         },
         timeout: 180000, // Timeout in milliseconds
-      }),
+      })
     );
   };
 
@@ -110,7 +110,7 @@ export default function App() {
               timeout: 180000,
               rpId: "guhansensam.com", // The same domain used to create the Passkey
               userVerification: "required",
-            }),
+            })
           );
           break;
         case "Google":
@@ -119,7 +119,7 @@ export default function App() {
               requireVerifiedPhoneNumber: true,
               serverClientId:
                 "236165471941-5j2k7v03af3evisqvo8153eme4vjnfvq.apps.googleusercontent.com",
-            }),
+            })
           );
           break;
       }
@@ -141,7 +141,7 @@ export default function App() {
       new GoogleButtonProvider({
         serverClientId:
           "236165471941-5j2k7v03af3evisqvo8153eme4vjnfvq.apps.googleusercontent.com",
-      }),
+      })
     );
   };
 
