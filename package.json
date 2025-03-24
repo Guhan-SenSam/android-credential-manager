@@ -39,7 +39,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
-    "@types/react": "~18.3.12",
+    "@types/react": "~19.0.12",
     "commitlint": "^19.8.0",
     "expo": "~52.0.0",
     "expo-module-scripts": "^4.0.3",
