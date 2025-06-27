@@ -41,7 +41,7 @@
     "@commitlint/config-conventional": "^19.8.0",
     "@types/react": "~18.3.12",
     "commitlint": "^19.8.0",
-    "expo": "~52.0.0",
+    "expo": "~53.0.13",
     "expo-module-scripts": "^4.0.3",
     "prettier": "^3.5.3",
     "react-native": "0.76.0"
