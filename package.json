@@ -37,7 +37,7 @@
     "react-native-svg": "^15.11.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
+    "@commitlint/cli": "^20.0.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@types/react": "~18.3.12",
     "commitlint": "^19.8.0",
